@@ -1,0 +1,44 @@
+.container {
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.container:hover {
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.8rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  color: rgba(128, 128, 128, 0.5);
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-left: 1rem;
+  border: none;
+  color: brown;
+  border-radius: 5px;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: brown;
+}
