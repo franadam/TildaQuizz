@@ -14,7 +14,7 @@ const Card = ({ id, name, score, isStarted }: Props): JSX.Element => {
   const history = useHistory();
 
   const takeQuiz = () => {
-    history.push(`/quiz/${id}`);
+    history.push(`/quizz/${id}`);
   };
 
   return (

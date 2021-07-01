@@ -5,12 +5,13 @@ interface Question {
   options: string;
 }
 
-interface Quiz {
+interface Quizz {
   id: string;
   name: string;
   score: number;
+  isStarted: boolean;
   questions: Question[];
 }
 
 export type { Question };
-export default Quiz;
+export default Quizz;

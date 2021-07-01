@@ -1,11 +1,11 @@
 import React from 'react';
-import Quiz from '../../interfaces/Quiz.interface';
+import Quizz from '../../interfaces/Quizz.interface';
 
 import Card from './Card/Card';
 import classes from './CardsList.module.css';
 
 interface Props {
-  list: Quiz[];
+  list: Quizz[];
 }
 const CardsList = ({ list }: Props): JSX.Element => {
   return (
@@ -16,7 +16,7 @@ const CardsList = ({ list }: Props): JSX.Element => {
           id={card.id}
           name={card.name}
           score={card.score}
-          isStarted={false}
+          isStarted={card.isStarted}
         />
       ))}
     </div>
