@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import { useQuery } from '@apollo/client';
 
-import { QUIZZES } from './queries/quizz';
+import { QUIZZES_QUESTIONS } from './queries/quizz';
 import Quizz from './interfaces/Quizz.interface';
 
 interface AppContextInterface {
@@ -28,7 +28,7 @@ interface Props {
 const AppProvider = ({ children }: Props): JSX.Element => {
   const [quizzes, setQuizzes] = useState<Quizz[]>([]);
 
-  const { loading, data } = useQuery(QUIZZES);
+  const { loading, data } = useQuery(QUIZZES_QUESTIONS);
 
   useEffect(() => {
     if (!loading)
