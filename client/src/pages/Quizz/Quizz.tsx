@@ -21,7 +21,6 @@ const QuizzPage = (): JSX.Element => {
   const [questionId, setQuestionId] = useState(0);
 
   useEffect(() => {
-    console.log('quizzId :>> ', quizzId);
     if (!isLoading) {
       const quizz = quizzes.find((quizz) => quizz.id === quizzId);
       if (quizz) setQuizz(quizz);

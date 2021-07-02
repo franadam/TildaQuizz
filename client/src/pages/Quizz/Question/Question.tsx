@@ -76,7 +76,7 @@ const QuestionPage = (): JSX.Element => {
   const displayOptions = () => {
     const optionsArray = quizz.questions[index].options.split(',');
     return optionsArray.map((opt) => (
-      <div key={opt} className={classes.container}>
+      <div key={opt} className={classes.option}>
         <input
           type="radio"
           value={opt}
@@ -98,25 +98,27 @@ const QuestionPage = (): JSX.Element => {
         <p>Loading...</p>
       ) : quizz.questions.length ? (
         <div className={classes.wrapper}>
-          <h3 className={classes.subtitle}>{quizz.questions[index].text}</h3>
-          <form className={classes.container} onSubmit={submitHandler}>
+          <h2 className={classes.subtitle}>{quizz.questions[index].text}</h2>
+          <form className={classes.form} onSubmit={submitHandler}>
             {displayOptions()}
-            {index ? (
-              <button
-                className={classes.link}
-                onClick={() => navigate('previous')}
-              >
-                Back
-              </button>
-            ) : null}
+            <div className={classes.btns}>
+              {index ? (
+                <button
+                  className={`${classes.link} ${classes['link-prev']}`}
+                  onClick={() => navigate('previous')}
+                >
+                  Back
+                </button>
+              ) : null}
 
-            <button
-              type="submit"
-              className={classes.link}
-              onClick={() => navigate('next')}
-            >
-              Next
-            </button>
+              <button
+                type="submit"
+                className={classes.link}
+                onClick={() => navigate('next')}
+              >
+                Next
+              </button>
+            </div>
           </form>
         </div>
       ) : null}

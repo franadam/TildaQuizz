@@ -2,6 +2,7 @@
   padding: 1rem;
   margin: 1rem;
   box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+  background-color: white;
   border-radius: 5px;
 }
 
@@ -33,12 +34,15 @@
   padding: 1rem;
   margin-left: 1rem;
   border: none;
+  background-color: rgba(129, 129, 255, 0.6);
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
   color: brown;
   border-radius: 5px;
 }
 
 .button:hover {
   cursor: pointer;
-  color: white;
+  color: rgb(193, 193, 255);
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.6);
   background-color: brown;
 }
