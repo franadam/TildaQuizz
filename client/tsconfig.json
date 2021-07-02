@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../../quizz.ts", "../../Quizz", "../../Quizz/Dashboard.test.tsx", "../../Quizz"  ]
 }

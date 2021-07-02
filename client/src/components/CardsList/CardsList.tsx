@@ -16,6 +16,7 @@ const CardsList = ({ list }: Props): JSX.Element => {
           id={card.id}
           name={card.name}
           score={card.score}
+          length={card.questions.length}
           isStarted={card.isStarted}
         />
       ))}
